@@ -8,27 +8,23 @@
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
 <link rel="shortcut icon" href="assets/img/common/favicon1.ico">
 <link rel="apple-touch-icon" href="assets/img/common/apple-touch/icon.png">
+    
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/common.css">
 <link rel="stylesheet" href="assets/css/top.css">
-<link href="_common/css/style.css" rel="stylesheet">
-<link href="_common/css/openspecial.css" rel="stylesheet">
-<link href="_common/css/special.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/openspecial.css">
+    
 </head>
 <body>
-    <div id="wrapper">
-        <header class="header">
-        <div class="container">
-            <div class="title-block">
-            <h1></h1>
-            <h2></h2>
-            </div>
+    <div id="dorowrapper"> <!-- ドロワー用のwrapper -->
+        <header class="header2"> <!-- titleblock及びhumburgerbtn設置部分 -->
+        <div class="catch-copy"><span>Samo's figure</span></div>
         <div class="hamburger" id="open_nav">
             <img src="hamburger.png" alt="">
             </div>
-<h1 class="logo"><img src="assets/img/common/logo.png" alt="ロゴ"></h1>
-<div class="catch-copy"><span>Samo's figure</span></div>
-            </div>
+        </header>
+        <header class="header1"> <!-- 背景表示部分 -->
+    <h1 class="logo"><img src="assets/img/common/logo.png" alt="ロゴ"></h1>
     </header>
     <nav class="globalnav">
     <ul class="globalnav-list">
@@ -38,71 +34,7 @@
         <li><a href="contact/index.html">CONTACT</a></li>
         </ul>
     </nav>
-<main class="main">
-    <h2 class="js">テスト用のJSを一部置いています。</h2>
-    
-    <section> 
-    <!-- js 記入部分 -->
-    <form id="form"> <!-- プルダウンメニュー用　-->
-        <h2>プルダウンメニュー</h2>
-        <select name="select">
-        <option value="#">トップ</option>
-        <option value="menu/index.html">メニュー</option>
-        <option value="access/index.html">アクセス</option>
-        <option value="contact/index.html">コンタクト</option>
-        </select>
-        </form>
-        <h2><br>クッキーの取得(ページの下に表示されてます。ローカルページでのみ正常に作動)　取得後の削除ボタン</h2>
-        
-        <p><button id="testbtn">テスト用 cookie削除</button></p> <!-- クッキーの取得 -->
-        
-        <h2 class="js"><br>画像の切り替え　クリックした画像と切り替わります。</h2>
-        <div class="jscenter"> <!-- 画像の切り替え -->
-        <div>
-            <img src="assets/img/menu/pattern/pattern0.png" id="bigimg">
-            </div>
-        <ul>
-            <li><img src="assets/img/menu/pattern/pattern1.png" class="thumb" data-image="assets/img/menu/pattern/pattern1.png"></li>
-            <li><img src="assets/img/menu/pattern/pattern2.png" class="thumb" data-image="assets/img/menu/pattern/pattern2.png"></li>
-            <li><img src="assets/img/menu/pattern/pattern3.png" class="thumb" data-image="assets/img/menu/pattern/pattern3.png"></li>
-            <li><img src="assets/img/menu/pattern/pattern4.png" class="thumb" data-image="assets/img/menu/pattern/pattern4.png"></li>
-                </ul>
-        </div>
-        
-        <div class = "sidebar">　<!-- 開閉するナビゲーション -->
-        <h2><br>開閉するナビゲーション 開いたボタンのクリックは現在TOPページへの移動のみとなっています。</h2>
-        <h2>サポートページ</h2>
-        <div class="submenu">
-            <h3>1. 初めて使うとき</h3>
-            <ul class="hidden">
-                <li><a href="">- 概要</a></li>
-                <li><a href="">- インストールする</a></li>
-                <li><a href="">- アカウントを登録する</a></li>
-                <li><a href="">- アンインストールする</a></li>
-            </ul>
-            </div>
-            <div class="submenu">
-                <h3>2. 基本的な使い方</h3>
-                <ul class="hidden">
-                <li><a href="">- 基本的な操作方法</a></li>
-                <li><a href="">- 元の状態に復元する</a></li>
-                <li><a href="">- 機能拡張プラグインを追加する</a></li>
-                </ul>
-            </div>
-        </div>　<!-- ここまで開閉 -->
-        
-<div class="container">
-天気予報の表示
-<h3 id="place"></h3>
-<div id="now">
-    <div id="weather"　alt = "天気予報">
-    </div>
-    </div>
-    <!-- 天気予報週間テーブル　<table id="forecast">
-    </table>　ここまで天気予報週間 -->
-</div>
-    </section>
-    
+<main class="main">  
     <div class="wrapper">
     <div class="lead">
         <h1>このサイトは作成中のダミーです。</h1>
@@ -112,12 +44,12 @@
     <div class="img-link-wrap">
     <section class="img-link">
     <a href="menu/index.html">
-        <img src="assets/img/top/pan2.gif" alt="メニュー画像">
+        <img src="assets/img/top/tomenu.jpg" alt="メニュー画像">
         <h2 class="heading02"><span>MENU</span></h2></a>
     </section>
     <section class="img-link">
     <a href="access/index.html">
-        <img src="assets/img/top/kuma1.gif" alt="アクセス画像">
+        <img src="assets/img/top/toaccess.jpg" alt="アクセス画像">
         <h2 class="heading02"><span>ACCESS</span></h2>
         </a>
     </section>
@@ -131,80 +63,23 @@
 <foooter class="footer">
     <p class="copy"><small>&copy; Samo's figure</small></p>
 </foooter> 
-    </div>
-        
-<div id="privacy-panel">
-<p>当サイトではユーザーエクスペリエンス向上のためクッキーを使用しています。また、匿名でアクセス状況のデータを収集しています。詳しい情報は
-当サイトのプライバシーポリシーをご覧ください。</p>
-<button id="agreebtn">承諾する</button>
-</div>
+    </div><!-- ドロワーwrapper -->
 
-<script> //ここからjava scriptを記入
-const coution = `このページは作成中のダミーです。jsの調整中の為、スマートフォンでは位置がおかしくなる場所があります。位置情報の取得はローカルでなければ成功しませんので無視してください。
-サイトの下のクッキーに関しても無視して大丈夫です。`
-window.alert(coution);
-</script>
-<!-- <script src="script2.js"></script> -->
-<script src="js.cookie.js"></script><!-- cookie用のjs　-->
-<script>
-'use strict';
-const agree = Cookies.get('cookie-agree');
-const panel = document.getElementById('privacy-panel');
-if(agree === 'yes') {
-    document.body.removeChild(panel);
-} else {
-    document.getElementById('agreebtn').onclick = function() {
-        Cookies.set('cookie-agree', 'yes', {expires: 7});
-        document.body.removeChild(panel);
-    };
-}
-
-//クッキー削除(テスト用)
-document.getElementById('testbtn').onclick = function() {
-    Cookies.remove('cookie-agree');
-};
-
-</script>
-<script> //画像の切り替え用js
-    'use strict';
-    
-    const thumbs = document.querySelectorAll('.thumb');
-    thumbs.forEach(function(item, index) {
-    item.onclick = function() {
-        document.getElementById('bigimg').src = this.dataset.image;
-    }
-});
-    </script>
-<script src="jquery-3.4.1.min.js"></script>
-<script>
-    'use strict';
-    
-    $(document).ready(function(){;
-    $('.submenu h3').on('click', function(){;
-    $(this).next().toggleClass('hidden');
-    });
-});
-    </script>
-
-<script src="script.js"></script>
-    <nav id="nav">
+<nav id="nav">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">特集</a></li>
-        <li><a href="#">ホテル検索</a></li>
-        <li><a href="#">カフェ検索</a></li>
-        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">未実装(Javaと連携予定)</a></li>
+        <li><a href="#">未実装</a></li>
+        <li><a href="#">未実装</a></li>
+        <li><a href="#">未実装</a></li>
+        <li><a href="#">未実装</a></li>
         </ul>
     </nav>
-    <!-- <script src="jquery-3.4.1.min.js"></script> 2重になっているため。--> 
-    <script>
-    'use strict';
     
-    $(document).ready(function(){
-    $('#open_nav').on('click', function(){
-    $('#wrapper, #nav').toggleClass('show');
-    });
-    });
-    </script>
+<script src="js/jquery-3.4.1.min.js"></script>    
+<script src="js/script.js"></script>
+<script>
+'use strict'
+window.alert('このサイトは作成中のダミーです。タイトル左のボタンでドロワーが開閉します（内部は未実装）');    
+</script>
 </body>
 </html>

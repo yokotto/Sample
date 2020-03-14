@@ -1,71 +1,65 @@
 @charset "UTF-8";
 
-/*開閉ナビゲーション用*/
-.submenu h3 {
-    margin: 0 0 lem 0;
-    font-size: 16px;
-    cursor: pointer;
-    color: #5e78c1;
-}
-.submenu h3:hover {
-    color: #b04188;
-    text-decoration: underline;
-}
-.submenu ul {
-    margin: 0 0 lem 0;
-    list-style-type: none;
-    font-size: 14px;
-}
-.hidden {
-    display: none;
-}
-
 /* ===== 以下ドロワーナビゲーション　style.cssの上書き ===== */
-.container {
-    max-width: 100%;
-}
-img {
-    max-width: 100%;
-}
-/* ===== 機能の実装に必要なCSS ===== */
 
+/* ===== ハンバーガー ===== */
+.hamburger {
+    flex: 0 0 32px; 
+    align-self: center; 
+    margin-left: 16px; 
+    text-align: left;
+    color: #000;
+    position: relative;
+    width: 10%;
+    height: 0;
+    padding-top: 10px;
+    background-color: aquamarine;
+}
+
+@media print, screen and (min-width: 768px) {
+    .hamuburger {
+        padding-top:none;
+        width: 110px;
+        padding: 20px;
+        left: 40px;
+    }
+}
 /* ドロワーナビゲーションの必須スタイル */
 #nav {
+    position: fixed;
+    right: -135px;
+    top: 0;
+    width: 135px;
+    height: 100%;
+}
+
+@media(min-width: 768px) {
+    #nav { 
     position: fixed;
     right: -270px;
     top: 0;
     width: 270px;
     height: 100%;
+    }
 }
 
 
 /* ドロワーが開かれたときのスタイル */
 .show {
-    transform: translate3d(-270px, 0, 0);
+    transform: translate3d(-135px, 0, 0);
+}
+
+@media(min-width: 768px) {
+    .show {
+        transform: translate3d(-270px, 0, 0);
+    }
 }
 
 /* 開く閉じるアニメーション */
-#wrapper, #nav {
+#dorowrapper, #nav {
     transition: transform 0.3s;
 }
-/* ===== ヘッダーにボタンを配置 ===== */
-.header {
-    padding: 60px 0;
-}
-header .container {
-    display: flex;
-    justify-content: space-between;
-}
-.title-block {
-    flex: 1 1 auto;
-}
-.hamburger {
-    flex: 0 0 32px;
-    align-self: center;
-    margin-left: 16px;
-    text-align: center;
-    color: #000;
-}
+
 
 /* ===== 装飾的なCSS ===== */
 
