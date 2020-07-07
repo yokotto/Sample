@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+table th {
+  
+  padding: 2px;
+  color:black;
+  border:solid 1px black;
+}
+
+table td {
+  
+  padding: 2px 2px;
+  color:black;
+  border:solid 1px black;  
+}
+
+p.title-image img{
+  width:1350px;
+  height:640px;
+}
+
+.title-logo {
+position:absolute;
+top:50px;
+left:50px;
+font-size: 50px;
+font-family:fantasy;
+
+}
+
+.title-table {
+position:absolute;
+top:300px;
+left:600px;
+font-size: 20px;
+background-color:rgba(255,0,0,0.2);
+}
+
+.title-table td {
+padding:10px;
+border:solid 3px black;
+margin: 0px;
+}
+  
+.hero {
+position:absolute;
+top: 30px;
+left: 10px;
+background-color: aqua;
+width: 750px;
+height: 610px;
+}
+
+.monster {
+position:absolute;
+top: 30px;
+right: 80px;
+background-color: red;
+width: 400px;
+height: 610px;
+}
+
+.result {
+position:absolute;
+top: 450px;
+left: 50px;
+background-color: yellow;
+width: 300px;
+height: 150px;
+}
+
+.vs {
+position:absolute;
+text-align:center;
+font-size: 50px;
+font-family: sans-serif;
+top:250px;
+left:780px;
+}
+
+.skill-table {
+  
+}
+
+.skill-table th {
+  font-size:12px;
+  background-color:yellow;
+}
+
+.skill-table td {
+  font-size:12px;
+  background-color:yellow;
+}
+
+.item-table {
+  position:absolute;
+  top:30px;
+  left:400px;
+}
+
+.item-table th {
+  font-size:12px;
+  background-color:greenyellow;
+}
+
+.item-table td {
+  font-size:12px;
+  background-color:greenyellow;
+}
+
+.heroImage {
+  
+  width:100px;
+  height:100px;
+}
+
+.monsterImage {
+  width:100px;
+  height:100px;
+}
+
+.copyright {
+  position:absolute;
+  bottom:0px;
+  left:0px;
+}
+
+.clear-logo {
+  position:absolute;
+  font-size:50px;
+  font-family:fantasy;
+
+

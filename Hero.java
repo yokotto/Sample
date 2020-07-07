@@ -32,7 +32,7 @@ public class Hero implements Serializable{
 	
 	//以下get用メソッド
 	public int getId() { return id; }
-	public int getlv() { return lv; }
+	public int getLv() { return lv; }
 	public int getExp() { return exp; }
 	public String getName() { return name; }
 	public String getStatus() { return status; }

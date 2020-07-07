@@ -1,13 +1,13 @@
 package model;
 
-import dao.DaoCheckParameter;
+import dao.DaoGetParameter;
 
 public class HeroCheckParameter extends Hero{
 	public void heroCheckParameter(){
 
-		DaoCheckParameter dcp = new DaoCheckParameter();
+		DaoGetParameter dgp = new DaoGetParameter();
 		
-		dcp.daoCheckParameter();		
+		dgp.daoCheckParameter();		
 
 	}
 }

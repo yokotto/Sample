@@ -2,18 +2,9 @@ package dao;
 
 import java.sql.*;
 
-/*このクラスをDAOパッケージで継承することでデータベースの
-URL,USER,PASSを一括で変更する。*/
-class DAO{
+public class DaoCount extends DAO {
 
-	String DB_URL, DB_USER, DB_PASS;
-
-	public DAO(){
-		DB_URL =
-		"jdbc:h2:tcp:localhost/~/example";
-		DB_USER = "sa";
-		DB_PASS = ""; 
-	}
+	public DaoCount() { }
 
 	//キャラの人数確認用のメソッド
 	public int count(String table){
@@ -41,5 +32,3 @@ class DAO{
 		return countId;
 	}
 }
-		
-		
