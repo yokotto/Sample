@@ -1,0 +1,126 @@
+/* 価格を入力すると自動で計算を行ってくれるWEBアプリケーションです。
+今回は簡単なたし算のみを行うようになっています。同時に値段の評価を行います。
+ファイルは全部で５つです。長文になるためサーブレット部分とJSP部分で
+2つのテキストファイルに分割してあります。
+
+作成にあたりテキストエディタにBrackets、コンパイルにコマンドプロンプトを使用しました。
+xmlファイルは今回は使用していません。
+Tomcat9.0にて動作確認済みです。
+
+
+以下ののファイルはサーブレット部分になります。
+*/
+
+
+//ファイル名:PriceCheck アプリケーションのコントロールを行うクラス
+
+package servlet;
+
+import java.io.IOException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import model.BeanInfo;
+import model.BeanMath;
+
+@WebServlet("/PriceCheck")
+public class PriceCheck extends HttpServlet 
+{
+    private static final long serialVersionUID = 1L;
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    throws ServletException, IOException 
+    {
+    //Getメソッドのフォワード 最初のフォワード
+    RequestDispatcher dispatcher = 
+    request.getRequestDispatcher("/WEB-INF/jsp/priceCheck.jsp");
+    dispatcher.forward(request, response);
+}
+//以上Getメソッド
+//以下Postメソッド
+protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+throws ServletException, IOException {
+//リクエストパラメータの取得
+String price1 = request.getParameter("price1");
+String price2 = request.getParameter("price2");
+    
+//入力値をプロパティに設定
+BeanInfo beaninfo = new BeanInfo();
+beaninfo.setPrice1(Double.parseDouble(price1));
+beaninfo.setPrice2(Double.parseDouble(price2));
+
+//価格計算を実行し結果を設定
+BeanMath beanmath = new BeanMath();
+beanmath.execute(beaninfo);
+
+//リクエストスコープに保存
+request.setAttribute("beaninfo", beaninfo);
+
+//PriceResult.jspに、フォワード
+RequestDispatcher dispatcher = 
+request.getRequestDispatcher
+("/WEB-INF/jsp/priceResult.jsp");
+dispatcher.forward(request,response);
+    }
+//以上Postメソッド
+}
+//ここまでPriceCheckクラス
+
+//ファイル名:BeanInfo　値段設定の情報を持つクラス
+
+package model;
+
+import java.util.*;
+import java.io.*;
+
+public class BeanInfo implements Serializable {
+    //価格情報に関する変数を定義
+    private double price1, price2, totalprice;
+    private String type;
+    
+    //getterの作成
+    public double getPrice1() { return price1; }
+    public double getPrice2() { return price2; }
+    public double getTotalprice() { return totalprice; }
+    public String getType() {return type; }
+    
+    //setterの作成
+    public void setPrice1(double price1) { this.price1 = price1; }
+    public void setPrice2(double price2) { this.price2 = price2; }
+    public void setTotalprice(double totalprice) { this.totalprice = totalprice; }
+    public void setType(String type) { this.type = type; }
+}
+    
+//ここまでBeanInfoクラス
+
+//ファイル名:BeanMath 値段に関する処理を行うクラス
+
+package model;
+
+public class BeanMath {
+    public void execute(BeanInfo beaninfo) {
+        //合計金額を算出して設定
+        double price1 = beaninfo.getPrice1();
+        double price2 = beaninfo.getPrice2();
+        double totalprice = price1 + price2;
+        beaninfo.setTotalprice(totalprice);
+        
+        //税込金額から金額レベルを設定
+        String type;
+        if(totalprice < 2000){
+            type = "安価";
+        } else if(totalprice < 5000 && totalprice >= 2000 ){
+            type = "普通";
+        } else {
+            type = "高価";
+        }
+        beaninfo.setType(type);
+    }
+}
+//model 及び servlet パッケージは以上になります。
+//JSP部分をport2　②.txtファイルに記載します。
+
+                                
